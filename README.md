@@ -1,3 +1,15 @@
+# Research question
+
+The effect of the canal parade on the Airbnb market in Amsterdam during the gaypride. 
+
+# Motivation 
+
+The gaypride is an enormous event in the Amsterdam which attracts people from inside and outside the Netherlands. The gaypride interests us since we believe equality is important for everyone and the gaypride is a great way to celebrate this. Many students visit Amsterdam during the gaypride and as far as we know many take the train back home, however this is not possible for everyone. We therefore are curious about the effect on the Airbnb market during the canal parade. 
+
+
+
+__________________________________________________________________________________________
+
 # Example of reproducible research workflow 
 
 This is a basic example repository using Gnu make for a reproducible research workflow, as described in detail here: [tilburgsciencehub.com](http://tilburgsciencehub.com/). 
