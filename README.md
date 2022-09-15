@@ -1,16 +1,15 @@
-# Introduction
+# The effect of the canal parade on the Airbnb market in Amsterdam
 
+## Introduction
 Welcome to the 'Canal parade vs Airbnb markter' repository! In this repository you can read about our research regarding the effect of the canal parade on the Airbnb market, which includes prices and availability. 
 
-# Research question
-
+## Research question
 The effect of the canal parade on the Airbnb market in Amsterdam. 
 
-# Research motivation 
+# Research
+## Research motivation
 
-
-
-# Research method
+## Research method
 
 
 
