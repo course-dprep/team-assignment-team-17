@@ -1,10 +1,16 @@
+# Introduction
+
+Welcome to the 'Canal parade vs Airbnb markter' repository! In this repository you can read about our research regarding the effect of the canal parade on the Airbnb market, which includes prices and availability. 
+
 # Research question
 
-The effect of the canal parade on the Airbnb market in Amsterdam during the gaypride. 
+The effect of the canal parade on the Airbnb market in Amsterdam. 
 
-# Motivation 
+# Research motivation 
 
-The gaypride is an enormous event in the Amsterdam which attracts people from inside and outside the Netherlands. The gaypride interests us since we believe equality is important for everyone and the gaypride is a great way to celebrate this. Many students visit Amsterdam during the gaypride and as far as we know many take the train back home, however this is not possible for everyone. We therefore are curious about the effect on the Airbnb market during the canal parade. 
+
+
+# Research method
 
 
 
