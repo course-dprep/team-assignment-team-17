@@ -8,6 +8,10 @@ To what extent has the Canal Pride in the Netherlands changed the price per nigh
 
 # Research
 ## Research motivation
+The Canal Parade in Amsterdam is a parade of about 80 boats through the canals of Amsterdam, representing a variety of representatives and organizations related to the LGBTQI+ society. The Canal Parade is the highlight of the yearly Pride Week and attracts many spectators. The parade is followed by various parties in the city center of Amsterdam. Several hundred thousand visitors attend the events which makes the Canal Parade one of the biggest publicly open events in the Netherlands. The parade is also well known outside of the Netherlands. 
+
+Since the event is enormous in size, globally well-known and socially relevant we believe investigating the effect on prices and availability of Airbnb accommodations during this event is very interesting.
+
 
 ## Research method
 
