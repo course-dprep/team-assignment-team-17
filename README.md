@@ -5,8 +5,11 @@ Welcome to the 'Canal parade vs Airbnb markter' repository! In this repository y
 
 ## Table of contents
 [Research question](https://github.com/course-dprep/team-assignment-team-17#research-question)
+
 [Research](https://github.com/course-dprep/team-assignment-team-17#research)
+
 [Research motivation](https://github.com/course-dprep/team-assignment-team-17#research-motivation)
+
 [Research method](https://github.com/course-dprep/team-assignment-team-17#research-method)
 
 ## Research question
