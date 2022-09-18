@@ -3,6 +3,12 @@
 ## Introduction
 Welcome to the 'Canal parade vs Airbnb markter' repository! In this repository you can read about our research regarding the effect of the canal parade on the Airbnb market, which includes prices and availability. 
 
+## Table of contents
+[Research question](https://github.com/course-dprep/team-assignment-team-17/edit/master/README.md#research-question)
+[Research](https://github.com/course-dprep/team-assignment-team-17/edit/master/README.md#research)
+[Research motivation](https://github.com/course-dprep/team-assignment-team-17/edit/master/README.md#research-motivation)
+[Research method](https://github.com/course-dprep/team-assignment-team-17/edit/master/README.md#research-method)
+
 ## Research question
 To what extent has the Canal Pride in the Netherlands changed the price per night of the Airbnb accomodations in Amsterdam, and to what extent does the location of the accomodation influence this effect?
 
