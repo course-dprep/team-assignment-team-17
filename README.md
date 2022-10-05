@@ -27,7 +27,7 @@ The research method that is used in this project is a regression analysis. This 
 
 ## 1.4 Conceptual model
 
-![conceptual model (1)](https://user-images.githubusercontent.com/112557841/194030060-de287d84-6fc2-40f5-9a85-57683f76af6c.png)
+![conceptual model](https://user-images.githubusercontent.com/112410933/194032510-b492862b-b152-476d-a71b-7ef28c7c783e.jpg)
 
 __________________________________________________________________________________________
 
