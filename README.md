@@ -15,6 +15,8 @@ Welcome to the 'Canal parade vs Airbnb markter' repository! In this repository y
 
 [1.4 Conceptual model](https://github.com/course-dprep/team-assignment-team-17#conceptual-model)
 
+[1.5 Variables](https://github.com/course-dprep/team-assignment-team-17#variables)
+
 [2. Repository overview](https://github.com/course-dprep/team-assignment-team-17#repository-overview)
 
 [3. Dependencies](https://github.com/course-dprep/team-assignment-team-17#dependencies)
@@ -35,6 +37,19 @@ The research method that is used in this project is a regression analysis. This 
 ## 1.4 Conceptual model
 
 ![conceptual model](https://user-images.githubusercontent.com/112410933/194032510-b492862b-b152-476d-a71b-7ef28c7c783e.jpg)
+
+## 1.5 Variables 
+| **Variable name**             | **Variable explanation**                           |
+| ----------------------------- |----------------------------------------------------|
+| price_calender          (Y)   | *                                                  |
+| price_listing                 | *                                                  |
+| date                          | *                                                  |
+| listing_id                    | *                                                  |
+| id                            | *                                                  |
+| neighbourhood                 | *                                                  |
+| availability                  | *                                                  |
+| available                     | *                                                  |
+
 
 __________________________________________________________________________________________
 # 2. Repository overview
