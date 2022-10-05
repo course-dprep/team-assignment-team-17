@@ -15,8 +15,6 @@ Welcome to the 'Canal parade vs Airbnb markter' repository! In this repository y
 
 [1.4 Conceptual model](https://github.com/course-dprep/team-assignment-team-17#conceptual-model)
 
-[1.5 Variables](https://github.com/course-dprep/team-assignment-team-17#variables)
-
 [2. Repository overview](https://github.com/course-dprep/team-assignment-team-17#repository-overview)
 
 [3. Dependencies](https://github.com/course-dprep/team-assignment-team-17#dependencies)
@@ -32,45 +30,11 @@ The Canal Parade in Amsterdam is a parade of about 80 boats through the canals o
 Since the event is enormous in size, globally well-known and socially relevant we believe investigating the effect on prices and availability of Airbnb accommodations during this event is very interesting.
 
 ## 1.3 Research method
-The research method that is used in this project is a regression analysis. This method is used to examine the influence of the Canel Pride in Amsterdam on the price of the Airbnb listing in Amsterdam.  In the model, the moderator ‘location of the accommodation’ is analysed. According to this regression analysis, we can conclude if these variables have a significant effect on the Airbnb listing prices in Amsterdam. The research question can be answered by means of the output. 
+The research method that is used in this project is a regression analysis. This method is used to examine the influence of the Canel Pride in Amsterdam on the price of the Airbnb listing in Amsterdam.  In the model, the moderator ‘location of the accommodation’ is analysed. According to this regression analysis, we can conclude if these variables have a significant effect on the Airbnb listing prices in Amsterdam. The research question can be answered by means of the output. See [here](https://github.com/course-dprep/team-assignment-team-17/blob/master/src/README.md) for the specific variables used.  
 
 ## 1.4 Conceptual model
 
 ![conceptual model](https://user-images.githubusercontent.com/112410933/194032510-b492862b-b152-476d-a71b-7ef28c7c783e.jpg)
-
-## 1.5 Variables 
-| **Variable name**                     | type  | **Variable explanation**              |
-| --------------------------------------|-------|---------------------------------------|
-| price_calender                        |  (Y)  | The price registered on a given date  |
-| price_listing                         |       | The price of the listing              |
-| date                                  | (X1)  | Neighbourhood in Amsterdam            |
-| Oostelijk Havengebied -Indische Buurt | (X2)  | Neighbourhood in Amsterdam            |
-| De Baarsjes - Oud-West                | (X3)  | Neighbourhood in Amsterdam            | 
-| Zuid                                  | (X4)  | Neighbourhood in Amsterdam            |
-| Noord-West                            | (X5)  | Neighbourhood in Amsterdam            |
-| De Aker - Nieuw Sloten                | (X6)  | Neighbourhood in Amsterdam            |
-| Westerpark                            | (X7)  | Neighbourhood in Amsterdam            |
-| Watergraafsmeer                       | (X8)  | Neighbourhood in Amsterdam            |
-| Oud-Noord                             | (X9)  | Neighbourhood in Amsterdam            |
-| Bijlmer-Centrum                       | (X10) | Neighbourhood in Amsterdam            |
-| Bos en Lommer                         | (X11) | Neighbourhood in Amsterdam            |
-| Gaasperdam - Driemond                 | (X12) | Neighbourhood in Amsterdam            |
-| Oostelijk Havengebied -Indische Buurt | (X13) | Neighbourhood in Amsterdam            |
-| De Baarsjes - Oud-West                | (X14) | Neighbourhood in Amsterdam            |
-| Zuid                                  | (X15) | Neighbourhood in Amsterdam            |
-| Noord-West                            | (X16) | Neighbourhood in Amsterdam            |
-| De Aker - Nieuw Sloten                | (X17) | Neighbourhood in Amsterdam            |
-| Westerpark                            | (X18) | Neighbourhood in Amsterdam            |
-| Watergraafsmeer                       | (X19) | Neighbourhood in Amsterdam            |
-| Oud-Noord                             | (X20) | Neighbourhood in Amsterdam            |
-| Bijlmer-Centrum                       | (X21) | Neighbourhood in Amsterdam            |
-| Bos en Lommer                         | (X22) | Neighbourhood in Amsterdam            |
-| Gaasperdam - Driemond                 | (X23) | Neighbourhood in Amsterdam            |
-| listing_id                            |       | The number related to the listing     |
-| id                                    |       | The number related to the listing     |
-| availability                          |       | The availability of the Airbnb        |
-
-
 __________________________________________________________________________________________
 # 2. Repository overview
 ```
