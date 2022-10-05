@@ -13,6 +13,13 @@ Welcome to the 'Canal parade vs Airbnb markter' repository! In this repository y
 
 [1.3 Research method](https://github.com/course-dprep/team-assignment-team-17#research-method)
 
+[1.4 Conceptual model](https://github.com/course-dprep/team-assignment-team-17#conceptual-model)
+
+[2. Repository overview](https://github.com/course-dprep/team-assignment-team-17#repository-overview)
+
+[3. Dependencies](https://github.com/course-dprep/team-assignment-team-17#dependencies)
+
+
 # 1. Research
 ## 1.1 Research question
 To what extent has the Canal Pride in the Netherlands changed the price per night of the Airbnb accomodations in Amsterdam, and to what extent does the location of the accomodation influence this effect?
@@ -30,27 +37,32 @@ The research method that is used in this project is a regression analysis. This 
 ![conceptual model](https://user-images.githubusercontent.com/112410933/194032510-b492862b-b152-476d-a71b-7ef28c7c783e.jpg)
 
 __________________________________________________________________________________________
+# 2. Repository overview
+```
+- .github
+- data
+  - dataset1
+  - dataset2
+- gen
+  - analysis
+  - data-preparation
+  - paper
+- src
+  - analysis
+  - data-preparation
+  - paper
+- .gitignore
+- README.md
+- Makefile
+```
 
-# Example of reproducible research workflow 
-
-This is a basic example repository using Gnu make for a reproducible research workflow, as described in detail here: [tilburgsciencehub.com](http://tilburgsciencehub.com/). 
-
-The main aim of this to have a basic structure, which can be easily adjusted to use in an actual project.  In this example project, the following is done: 
-1. Download and prepare data
-2. Run some analysis
-3. Present results in a final pdf generated using LaTeX
-
-## Dependencies
-- R 
+# 3. Dependencies
+- R. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/).
 - R packages: `install.packages("stargazer")`
-- [Gnu Make](https://tilburgsciencehub.com/get/make) 
-- [TeX distribution](https://tilburgsciencehub.com/get/latex/?utm_campaign=referral-short)
+- Make. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/).
 - For the `makefile` to work, R, Gnu make and the TeX distribution (specifically `pdflatex`) need to be made available in the system path 
-- Detailed installation instructions can be found here: [tilburgsciencehub.com](http://tilburgsciencehub.com/)
 
+## About 
 
-## Notes
-- `make clean` removes all unncessary temporary files. 
-- Tested under Linux Mint (should work in any linux distro, as well as on Windows and Mac) 
-- IMPORTANT: In `makefile`, when using `\` to split code into multiple lines, no space should follow `\`. Otherwise Gnu make aborts with error 193. 
-- Many possible improvements remain. Comments and contributions are welcome!
+This research project is part of the [Data Preparation and Workflow Management (dPrep)](https://dprep.hannesdatta.com/) course at Tilburg University. The project is conducted by Team 17: [Isa Nummerdor](https://github.com/isanummerdor), [Janne Donkers](https://github.com/JanneDonkers) and [Nore Messing](https://github.com/Noremessing).
+
