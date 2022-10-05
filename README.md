@@ -25,6 +25,9 @@ Since the event is enormous in size, globally well-known and socially relevant w
 ## 1.3 Research method
 The research method that is used in this project is a regression analysis. This method is used to examine the influence of the Canel Pride in Amsterdam on the price of the Airbnb listing in Amsterdam.  In the model, the moderator ‘location of the accommodation’ is analysed. According to this regression analysis, we can conclude if these variables have a significant effect on the Airbnb listing prices in Amsterdam. The research question can be answered by means of the output. 
 
+## 1.4 Conceptual model
+
+![conceptual model (1)](https://user-images.githubusercontent.com/112557841/194030060-de287d84-6fc2-40f5-9a85-57683f76af6c.png)
 
 __________________________________________________________________________________________
 
