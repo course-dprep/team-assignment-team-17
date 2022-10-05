@@ -39,8 +39,8 @@ The research method that is used in this project is a regression analysis. This 
 ![conceptual model](https://user-images.githubusercontent.com/112410933/194032510-b492862b-b152-476d-a71b-7ef28c7c783e.jpg)
 
 ## 1.5 Variables 
-| **Variable name**                           | **Variable explanation**              |
-| --------------------------------------------|---------------------------------------|
+| **Variable name**                     | type  | **Variable explanation**              |
+| --------------------------------------|-------|---------------------------------------|
 | price_calender                        |  (Y)  | The price registered on a given date  |
 | price_listing                         |       | The price of the listing              |
 | date                                  | (X1)  | Neighbourhood in Amsterdam            |
