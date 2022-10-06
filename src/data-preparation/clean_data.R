@@ -59,3 +59,9 @@ is.numeric(calendar_x$adjusted_price)
 sum(is.na(listing_x$price))
 sum(is.na(calendar_x$price))
 sum(is.na(calendar_x$adjusted_price))
+
+#save file
+write.csv(calendar_x, "Calendar_cleaned.csv")
+write.csv(listing_x, "Listings_cleaned.csv")
+
+
