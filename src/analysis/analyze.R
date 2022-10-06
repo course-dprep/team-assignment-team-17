@@ -1,3 +1,7 @@
+#Open file
+
+read_csv("Airbnb_merged.csv")
+
 #Visualization of the model
 #Graph
 temp <- only_saturdays %>% group_by(neighbourhood_cleansed, date_cp) %>% summarise(price_mean = mean(price_calendar))
