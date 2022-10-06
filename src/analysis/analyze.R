@@ -1,11 +1,9 @@
-# load 
-load("./gen/analysis/input/data_cleaned.RData")
+#Visualization of the model
+#Graph
+temp <- only_saturdays %>% group_by(neighbourhood_cleansed, date_cp) %>% summarise(price_mean = mean(price_calendar))
+ggplot(temp, aes(x=date_cp, y=price_mean, fill=as.factor(neighbourhood_cleansed)))+ geom_col(position="dodge")
 
-# Estimate model 1 
-m1 <- lm(V1 ~ V3 + V4,df_cleaned)
+#Anova test
+Canal_parade_aov <- lm(adjusted_price ~ `Centrum-Oost`*date_cp + `Zuid`*date_cp + `Oostelijk Havengebied - Indische Buurt`*date_cp+`Noord-West`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`Watergraafsmeer`*date_cp+`Oud-Noord`*date_cp+`Bijlmer-Centrum`+`Bos en Lommer`*date_cp+`Gaasperdam - Driemond`*date_cp+`De Pijp - Rivierenbuurt`*date_cp+`Centrum-West`*date_cp+`Oud-Oost`*date_cp+`Noord-Oost`*date_cp+`Buitenveldert - Zuidas`*date_cp+`IJburg - Zeeburgereiland`*date_cp+`Osdorp`*date_cp+`Slotervaart`*date_cp+`Geuzenveld - Slotermeer`*date_cp+`Bijlmer-Oost`*date_cp , Airbnb)
 
-# Estimate model 2 
-m2 <- lm(V1 ~ V3 + V4 + V5 , df_cleaned)
-
-# Save results
-save(m1,m2,file="./gen/analysis/output/model_results.RData")
+anova(Canal_parade_aov)
