@@ -1,9 +1,25 @@
-# Load datasets into R 
-df1 <- read.csv("./gen/data-preparation/input/dataset1.csv")
-df2 <- read.csv("./gen/data-preparation/input/dataset2.csv")
+#Merging
 
-# Merge on id
-df_merged <- merge(df1,df2,by="id")
+calendar_listing_merge <- calendar_x %>% left_join(listing_x, by = c("listing_id" = "id"), suffix = c("_calendar", "_listing"))
 
-# Save merged data
-save(df_merged,file="./gen/data-preparation/temp/data_merged.RData")
+#Remove NA's
+calendar_listing <- calendar_listing_merge %>% drop_na(price_calendar)
+calendar_listing <- calendar_listing_merge %>% drop_na(adjusted_price)
+
+#Checking NA's
+sum(is.na(calendar_listing$price_calendar))
+sum(is.na(calendar_listing$adjusted_price))
+
+# Filter dataset
+only_saturdays <- calendar_listing %>% filter(date == "2022-08-06"|date == "2022-08-13"|date == "2022-07-30" |date == "2022-08-20"|date == "2022-07-23")
+
+#check filtered dataset
+unique(only_saturdays$date)
+
+#Widen dataset
+#Pivot wider
+Airbnb <- only_saturdays %>% mutate(n=1) %>% pivot_wider(names_from = "neighbourhood_cleansed", values_from = n, values_fill= list(n=0))
+
+#Additional column
+Airbnb$date_cp <- Airbnb$date == "2022-08-06"
+only_saturdays$date_cp <- only_saturdays$date == "2022-08-06"
