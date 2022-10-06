@@ -1,3 +1,9 @@
+#Opening files
+read.csv("Calendar_cleaned.csv")
+view(calendar)
+
+read.csv("Listings_cleaned.csv")
+
 #Merging
 
 calendar_listing_merge <- calendar_x %>% left_join(listing_x, by = c("listing_id" = "id"), suffix = c("_calendar", "_listing"))
@@ -23,3 +29,5 @@ Airbnb <- only_saturdays %>% mutate(n=1) %>% pivot_wider(names_from = "neighbour
 #Additional column
 Airbnb$date_cp <- Airbnb$date == "2022-08-06"
 only_saturdays$date_cp <- only_saturdays$date == "2022-08-06"
+
+write.csv(Airbnb, "Airbnb_merged")
