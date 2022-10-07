@@ -17,5 +17,5 @@ gunzip("calendar.csv.gz", remove=FALSE)
 gunzip("listings.csv.gz", remove=FALSE)
 
 #opening files
-listings <- read.csv(listings.csv)
-calendar <- read.csv(calendar.csv)
+listings <- read.csv("listings.csv")
+calendar <- read.csv("calendar.csv")
