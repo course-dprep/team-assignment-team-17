@@ -15,3 +15,7 @@ http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2022-09-07/
 #converting files from .csv.gz to .csv
 gunzip("calendar.csv.gz", remove=FALSE)
 gunzip("listings.csv.gz", remove=FALSE)
+
+#opening files
+listings <- read.csv(listings.csv)
+calendar <- read.csv(calendar.csv)
