@@ -1,6 +1,6 @@
 #Open file
 
-Airbnb <- read_csv("Airbnb_merged.csv")
+Airbnb <- read_csv("Airbnb_merged")
 
 #Visualization of the model
 #Graph
