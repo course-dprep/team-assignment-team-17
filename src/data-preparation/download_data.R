@@ -8,9 +8,9 @@ download.file('https://rgreminger.github.io/files/dataset2.csv','./data/dataset2
 
 ## downloading datasets from insideairbnb.com ##
 # download the listing dataset as .csv.gz file
-http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2022-09-07/data/listings.csv.gz
+http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-12-05/data/listings.csv.gz
 #download the calendar dataset as .csv.gz file
-http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2022-09-07/data/calendar.csv.gz
+http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-12-05/data/calendar.csv.gz
 
 #converting files from .csv.gz to .csv
 gunzip("calendar.csv.gz", remove=FALSE)
