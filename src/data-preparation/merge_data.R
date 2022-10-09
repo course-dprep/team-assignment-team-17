@@ -1,9 +1,9 @@
 #Opening files
 calendar_x <- read.csv("Calendar_cleaned.csv")
-view(calendar_x)
+View(calendar_x)
 
 listing_x <- read.csv("Listings_cleaned.csv")
-view(listing_x)
+View(listing_x)
 
 #Merging
 
