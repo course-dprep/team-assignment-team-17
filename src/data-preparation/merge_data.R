@@ -30,4 +30,4 @@ Airbnb <- only_saturdays %>% mutate(n=1) %>% pivot_wider(names_from = "neighbour
 #Additional column
 Airbnb$date_cp <- Airbnb$date == "2022-08-06"
 
-write.csv(Airbnb, "Airbnb_merged")
+write.csv(Airbnb, "Airbnb_merged.csv")
