@@ -25,9 +25,9 @@ unique(only_saturdays$date)
 
 #Widen dataset
 #Pivot wider
-Airbnb <- only_saturdays %>% mutate(n=1) %>% pivot_wider(names_from = "neighbourhood_cleansed", values_from = n, values_fill= list(n=0))
+airbnb <- only_saturdays %>% mutate(n=1) %>% pivot_wider(names_from = "neighbourhood_cleansed", values_from = n, values_fill= list(n=0))
 
 #Additional column
-Airbnb$date_cp <- Airbnb$date == "2022-08-06"
+airbnb$date_cp <- airbnb$date == "2022-08-06"
 
-write.csv(Airbnb, "Airbnb_merged.csv")
+write.csv(airbnb, "airbnb_merged.csv")
