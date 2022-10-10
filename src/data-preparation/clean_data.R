@@ -1,3 +1,11 @@
+#####################
+#### clean data #####
+#####################
+
+#opening files
+listings <- read.csv("data/listings.csv")
+calendar <- read.csv("data/calendar.csv")
+
 #Duplicates 
 
 #Count the number of unique id's
@@ -61,7 +69,8 @@ sum(is.na(calendar_x$price))
 sum(is.na(calendar_x$adjusted_price))
 
 #save file
-write.csv(calendar_x, "calendar_cleaned.csv")
-write.csv(listing_x, "listings_cleaned.csv")
+dir.create('temp')
+write.csv(calendar_x, "temp/calendar_cleaned.csv")
+write.csv(listing_x, "temp/listings_cleaned.csv")
 
 
