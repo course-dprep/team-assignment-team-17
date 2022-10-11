@@ -2,6 +2,8 @@
 #### clean data #####
 #####################
 
+library(dplyr)
+library(stringr)
 #opening files
 listings <- read.csv("data/listings.csv")
 calendar <- read.csv("data/calendar.csv")
@@ -70,7 +72,8 @@ sum(is.na(calendar_x$adjusted_price))
 
 #save file
 dir.create('temp')
-write.csv(calendar_x, "temp/calendar_cleaned.csv")
-write.csv(listing_x, "temp/listings_cleaned.csv")
+write.csv(calendar_x, "data/temp/calendar_cleaned.csv")
+write.csv(listing_x, "data/temp/listings_cleaned.csv")
+
 
 
