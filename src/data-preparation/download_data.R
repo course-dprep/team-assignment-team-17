@@ -4,6 +4,7 @@
 
 ## downloading datasets from insideairbnb.com ##
 
+library(R.utils)
 download_data <- function(url, filename){
   download.file(url = url, destfile= paste0(filename, ".csv.gz") )
 }
