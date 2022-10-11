@@ -69,3 +69,4 @@ data/temp/airbnb_merged.csv: src/data-preparation/merge_data_17.R data/temp/cale
   
 src/paper/output/neighbourhoods.pdf: src/analysis/analyzing_data_17.R data/temp/Airbnb_merged.csv
 	R --vanilla < src/analysis/analyzing_data_17.R
+
