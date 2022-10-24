@@ -1,16 +1,14 @@
-##makefile assignment
 ## Main build rule
 
-My_first_try: data/calendar.csv data/listings.csv data/temp/calendar_cleaned.csv data/temp/listings_cleaned.csv data/temp/airbnb_merged.csv 
+All: data/calendar.csv data/listings.csv gen/temp/calendar_cleaned.csv gen/temp/listings_cleaned.csv gen/temp/airbnb_merged.csv
 
-#all: output/neighbourhoods.pdf
+##sub builds
 
-## Sub_builds
-data/calendar.csv data/listings.csv: src/data-preparation/download_data_17.R
-	R --vanilla < src/data-preparation/download_data_17.R
+data/calendar.csv data/listings.csv: download_data.R
+	R --vanilla < download_data.R
 
-data/temp/calendar_cleaned.csv data/temp/listings_cleaned.csv: src/data-preparation/clean_data_17.R data/calendar.csv data/listings.csv
-	R --vanilla < src/data-preparation/clean_data_17.R
+gen/temp/calendar_cleaned.csv gen/temp/listings_cleaned.csv: clean_data.R data/calendar.csv data/listings.csv
+	R --vanilla < clean_data.R
 
-data/temp/airbnb_merged.csv: src/data-preparation/merge_data_17.R data/temp/calendar_cleaned.csv data/temp/listings_cleaned.csv
-	R --vanilla < src/data-preparation/merge_data_17.R
+gen/temp/airbnb_merged.csv: merge_data.R gen/temp/calendar_cleaned.csv gen/temp/listings_cleaned.csv
+	R --vanilla < merge_data.R

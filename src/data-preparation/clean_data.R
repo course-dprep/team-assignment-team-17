@@ -71,9 +71,10 @@ sum(is.na(calendar_x$price))
 sum(is.na(calendar_x$adjusted_price))
 
 #save file
-dir.create('temp')
-write.csv(calendar_x, "data/temp/calendar_cleaned.csv")
-write.csv(listing_x, "data/temp/listings_cleaned.csv")
+dir.create('gen')
+dir.create('gen/temp')
+write.csv(calendar_x, "gen/temp/calendar_cleaned.csv")
+write.csv(listing_x, "gen/temp/listings_cleaned.csv")
 
 
 
