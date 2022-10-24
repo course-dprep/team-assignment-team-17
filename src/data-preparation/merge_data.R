@@ -5,10 +5,10 @@
 library(dplyr)
 library(tidyr)
 #Opening files
-calendar_x <- read.csv("data/temp/calendar_cleaned.csv")
+calendar_x <- read.csv("../../gen/temp/calendar_cleaned.csv")
 View(calendar_x)
 
-listing_x <- read.csv("data/temp/listings_cleaned.csv")
+listing_x <- read.csv("../../gen/temp/listings_cleaned.csv")
 View(listing_x)
 
 #Merging
@@ -40,4 +40,4 @@ airbnb <- only_saturdays %>% mutate(n=1) %>% pivot_wider(names_from = "neighbour
 #Additional column
 airbnb$date_cp <- airbnb$date == "2022-08-06"
 
-write.csv(airbnb, "data/temp/airbnb_merged.csv")
+write.csv(airbnb, "../../gen/temp/airbnb_merged.csv")
