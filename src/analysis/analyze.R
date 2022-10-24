@@ -7,7 +7,7 @@ library(dplyr)
 library(ggplot2)
 library(readr)
 
-Airbnb <- read_csv("gen/temp/airbnb_merged.csv")
+Airbnb <- read_csv("../../gen/temp/airbnb_merged.csv")
 summary(Airbnb)
 
 #Visualization of the model
@@ -15,9 +15,9 @@ summary(Airbnb)
 temp <- Airbnb %>% group_by(neighbourhood_cleansed, date_cp) %>% summarise(price_mean = mean(price_calendar))
 ggplot(temp, aes(x=date_cp, y=price_mean, fill=as.factor(neighbourhood_cleansed)))+ geom_col(position="dodge")
 
-dir.create('gen/output')
+dir.create('../../gen/output')
 #saving ggplot as pdf
-pdf("gen/output/neighbourhoods.pdf")
+pdf("../../gen/output/neighbourhoods.pdf")
 myplot <- ggplot(temp, aes(x=date_cp, y=price_mean, fill=as.factor(neighbourhood_cleansed)))+ geom_col(position="dodge")
 print(myplot)
 dev.off()

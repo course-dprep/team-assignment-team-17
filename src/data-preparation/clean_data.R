@@ -5,8 +5,8 @@
 library(dplyr)
 library(stringr)
 #opening files
-listings <- read.csv("data/listings.csv")
-calendar <- read.csv("data/calendar.csv")
+listings <- read.csv("../../data/listings.csv")
+calendar <- read.csv("../../data/calendar.csv")
 
 #Duplicates 
 
@@ -71,10 +71,10 @@ sum(is.na(calendar_x$price))
 sum(is.na(calendar_x$adjusted_price))
 
 #save file
-dir.create('gen')
-dir.create('gen/temp')
-write.csv(calendar_x, "gen/temp/calendar_cleaned.csv")
-write.csv(listing_x, "gen/temp/listings_cleaned.csv")
+dir.create('../../gen')
+dir.create('../../gen/temp')
+write.csv(calendar_x, "../../gen/temp/calendar_cleaned.csv")
+write.csv(listing_x, "../../gen/temp/listings_cleaned.csv")
 
 
 
