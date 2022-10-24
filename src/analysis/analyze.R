@@ -15,6 +15,17 @@ summary(Airbnb)
 temp <- Airbnb %>% group_by(neighbourhood_cleansed, date_cp) %>% summarise(price_mean = mean(price_calendar))
 ggplot(temp, aes(x=date_cp, y=price_mean, fill=as.factor(neighbourhood_cleansed)))+ geom_col(position="dodge")
 
+#different graph
+plot(x = Airbnb$date,
+     y = Airbnb$Watergraafsmeer,
+     col = "red",
+     type = "l",
+     ylab = "price",
+     xlab = "date",
+     main = "prices during canal parade" )
+
+lines(Airbnb$adjusted_price, Airbnb$Watergraafsmeer,col ="blue")
+
 dir.create('../../src/paper')
 dir.create('../../src/paper/output')
 #saving ggplot as pdf
@@ -33,3 +44,7 @@ anova(Canal_parade_aov)
 canal_parade_lm <- lm(price_calendar ~ `Centrum-Oost`*date_cp + `Zuid`*date_cp + `Oostelijk Havengebied - Indische Buurt`*date_cp+`Noord-West`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`Watergraafsmeer`*date_cp+`Oud-Noord`*date_cp+`Bijlmer-Centrum`+`Bos en Lommer`*date_cp+`Gaasperdam - Driemond`*date_cp+`De Pijp - Rivierenbuurt`*date_cp+`Centrum-West`*date_cp+`Oud-Oost`*date_cp+`Noord-Oost`*date_cp+`Buitenveldert - Zuidas`*date_cp+`IJburg - Zeeburgereiland`*date_cp+`Osdorp`*date_cp+`Slotervaart`*date_cp+`Geuzenveld - Slotermeer`*date_cp+`Bijlmer-Oost`*date_cp , Airbnb)
 
 summary(canal_parade_lm)
+
+#plot per area of ams
+hist(Airbnb$date)
+
