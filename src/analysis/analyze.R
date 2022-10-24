@@ -15,9 +15,10 @@ summary(Airbnb)
 temp <- Airbnb %>% group_by(neighbourhood_cleansed, date_cp) %>% summarise(price_mean = mean(price_calendar))
 ggplot(temp, aes(x=date_cp, y=price_mean, fill=as.factor(neighbourhood_cleansed)))+ geom_col(position="dodge")
 
-dir.create('../../gen/output')
+dir.create('../../src/paper')
+dir.create('../../src/paper/output')
 #saving ggplot as pdf
-pdf("../../gen/output/neighbourhoods.pdf")
+pdf("../../src/paper/output/neighbourhoods.pdf")
 myplot <- ggplot(temp, aes(x=date_cp, y=price_mean, fill=as.factor(neighbourhood_cleansed)))+ geom_col(position="dodge")
 print(myplot)
 dev.off()

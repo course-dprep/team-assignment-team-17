@@ -1,8 +1,6 @@
-## Main build rule
 
-All: ../../data/calendar.csv ../../data/listings.csv ../../gen/temp/calendar_cleaned.csv ../../gen/temp/listings_cleaned.csv ../../gen/temp/airbnb_merged.csv
+all: ../../data/calendar.csv ../../data/listings.csv ../../gen/temp/calendar_cleaned.csv ../../gen/temp/listings_cleaned.csv ../../gen/temp/airbnb_merged.csv
 
-##sub builds
 
 ../../data/calendar.csv ../../data/listings.csv: download_data.R
 	R --vanilla < download_data.R

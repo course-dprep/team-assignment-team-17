@@ -5,3 +5,5 @@
 **gen/
 **.Rout
 *.csv
+*.csv.gz
+Rplots.pdf
