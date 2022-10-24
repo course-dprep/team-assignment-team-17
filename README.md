@@ -39,8 +39,6 @@ ________________________________________________________________________________
 # 2. Repository overview
 ```
 - data
-  - dataset1
-  - dataset2
 - gen
   - analysis
   - data-preparation
