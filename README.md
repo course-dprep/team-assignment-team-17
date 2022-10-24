@@ -38,7 +38,6 @@ The research method that is used in this project is a regression analysis. This 
 __________________________________________________________________________________________
 # 2. Repository overview
 ```
-- .github
 - data
   - dataset1
   - dataset2
