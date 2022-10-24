@@ -1,4 +1,7 @@
-all: ../../src/paper/output/neighbourhoods.pdf
+OUTPUT = ../../src/paper/output
+TEMP = ../../gen/temp
 
-../../src/paper/output/neighbourhoods.pdf: analyze.R ../../gen/temp/Airbnb_merged.csv
+all: $(OUTPUT)/neighbourhoods.pdf
+
+$(OUTPUT)/neighbourhoods.pdf: analyze.R $(TEMP)/Airbnb_merged.csv
 	R --vanilla < analyze.R
