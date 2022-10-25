@@ -15,7 +15,7 @@ Welcome to the 'Canal parade vs Airbnb markter' repository! In this repository y
 
 [1.4 Conceptual model](https://github.com/course-dprep/team-assignment-team-17#conceptual-model)
 
-[1.5 conclusion] (link)
+[1.5 conclusion] (https://github.com/course-dprep/team-assignment-team-17#15-conclusion)
 
 [2. Repository overview](https://github.com/course-dprep/team-assignment-team-17#repository-overview)
 
