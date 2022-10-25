@@ -1,0 +1,69 @@
+---
+title: "The effect of the canal parade on the Airbnb market in Amsterdam"
+author: "Nore Messing"
+date: "2022-10-25"
+output: pdf_document
+---
+
+```{r needed packages, include=FALSE, echo=FALSE, message=FALSE}
+#install.packages("R.utils")
+#install.packages("dplyr")
+#install.packages("stringr")
+#install.packages("reshape2")
+#install.packages("ggplot2")
+#install.packages("readr")
+#install.packages("stargazer")
+
+library("R.utils")
+library("dplyr")
+library("stringr")
+library("reshape2")
+library("ggplot2")
+library("readr")
+library("stargazer")
+```
+
+
+# analysis group 17
+
+## statistical tests
+For testing significance of this analysis two statistical tests were executed: ANOVA and a linear regression
+The ANOVA test:
+
+```{r ANOVA code, echo=FALSE, eval=TRUE}
+airbnb <- read_csv("../../gen/temp/airbnb_merged.csv")
+Canal_parade_aov <- lm(adjusted_price ~ `Centrum-Oost`*date_cp + `Zuid`*date_cp + `Oostelijk Havengebied - Indische Buurt`*date_cp+`Noord-West`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`Watergraafsmeer`*date_cp+`Oud-Noord`*date_cp+`Bijlmer-Centrum`+`Bos en Lommer`*date_cp+`Gaasperdam - Driemond`*date_cp+`De Pijp - Rivierenbuurt`*date_cp+`Centrum-West`*date_cp+`Oud-Oost`*date_cp+`Noord-Oost`*date_cp+`Buitenveldert - Zuidas`*date_cp+`IJburg - Zeeburgereiland`*date_cp+`Osdorp`*date_cp+`Slotervaart`*date_cp+`Geuzenveld - Slotermeer`*date_cp+`Bijlmer-Oost`*date_cp , airbnb)
+
+anova(Canal_parade_aov)
+```
+
+
+The linear regression:
+
+```{r linear regression code, echo=FALSE,eval=TRUE}
+canal_parade_lm <- lm(price_calendar ~ `Centrum-Oost`*date_cp + `Zuid`*date_cp + `Oostelijk Havengebied - Indische Buurt`*date_cp+`Noord-West`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`Watergraafsmeer`*date_cp+`Oud-Noord`*date_cp+`Bijlmer-Centrum`+`Bos en Lommer`*date_cp+`Gaasperdam - Driemond`*date_cp+`De Pijp - Rivierenbuurt`*date_cp+`Centrum-West`*date_cp+`Oud-Oost`*date_cp+`Noord-Oost`*date_cp+`Buitenveldert - Zuidas`*date_cp+`IJburg - Zeeburgereiland`*date_cp+`Osdorp`*date_cp+`Slotervaart`*date_cp+`Geuzenveld - Slotermeer`*date_cp+`Bijlmer-Oost`*date_cp , airbnb)
+
+summary(canal_parade_lm)
+```
+
+From these tests can be seen that there are no significant differences in the prices during 'normal' weekends and the weekends of the canal parade, and that this also does not differ in the different neighbourhoods. This can also be seen in the graphs below:
+
+```{r graph false, echo=FALSE, eval=TRUE}
+tempfalse <- airbnb %>% group_by(neighbourhood_cleansed, date_cp = FALSE) %>% summarise(price_mean = mean(price_calendar))
+ggplot(tempfalse, aes(x=date_cp, y=price_mean,fill=as.factor(neighbourhood_cleansed)))+ 
+  geom_col(position="dodge") +
+  theme(legend.key.size = unit(0.2, 'cm')) + 
+  theme(legend.text = element_text(size=5)) +
+  theme(legend.title = element_text(size=10))
+
+```
+
+```{r graph true, echo=FALSE, eval=TRUE}
+temptrue <- airbnb %>% group_by(neighbourhood_cleansed, date_cp = TRUE) %>% summarise(price_mean = mean(price_calendar))
+ggplot(temptrue, aes(x=date_cp, y=price_mean,fill=as.factor(neighbourhood_cleansed)))+ 
+  geom_col(position="dodge") +
+  theme(legend.key.size = unit(0.2, 'cm')) + 
+  theme(legend.text = element_text(size=5)) +
+  theme(legend.title = element_text(size=10))
+
+```
