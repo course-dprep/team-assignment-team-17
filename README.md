@@ -40,9 +40,9 @@ ________________________________________________________________________________
 ```
 - data
 - gen
-  - analysis
-  - data-preparation
-  - paper
+  - input
+  - output
+  - temp
 - src
   - analysis
   - data-preparation
