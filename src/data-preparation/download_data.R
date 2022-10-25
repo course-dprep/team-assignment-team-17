@@ -21,6 +21,3 @@ download_data(url_calendar, "../../data/calendar")
 gunzip("../../data/calendar.csv.gz", remove=FALSE)
 gunzip("../../data/listings.csv.gz", remove=FALSE)
 
-#opening files
-listings <- read.csv("../../data/listings.csv")
-calendar <- read.csv("../../data/calendar.csv")

@@ -1,15 +1,15 @@
 ## Main build rule
 
-All: analysis data-preparation
+All: data-preparation analysis 
 
 data-preparation:
 	make -C src/data-preparation
 	
-analysis: data-preparation
+analysis:
 	make -C src/analysis
 	
 clean: 
-	-rm -r data
-	-rm -r gen
+	R -e "unlink('data',recursive = TRUE)"
+	R -e "unlink('gen', recursive = TRUE)"
 
 
