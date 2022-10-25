@@ -17,7 +17,11 @@ Welcome to the 'Canal parade vs Airbnb markter' repository! In this repository y
 
 [2. Repository overview](https://github.com/course-dprep/team-assignment-team-17#repository-overview)
 
-[3. Dependencies](https://github.com/course-dprep/team-assignment-team-17#dependencies)
+[3. Running the project](https://github.com/course-dprep/team-assignment-team-17/edit/master/README.md#3-running-the-project)
+
+[3.1 Dependencies] (https://github.com/course-dprep/team-assignment-team-17/edit/master/README.md#31-dependencies)
+
+[3.2 Step by step] (https://github.com/course-dprep/team-assignment-team-17/edit/master/README.md#32-step-by-step)
 
 
 # 1. Research
@@ -52,11 +56,30 @@ ________________________________________________________________________________
 - Makefile
 ```
 
-# 3. Dependencies
+# 3. Running the project
+## 3.1 dependencies
 - R. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/).
-- R packages: `install.packages("stargazer")`
 - Make. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/).
 - For the `makefile` to work, R, Gnu make and the TeX distribution (specifically `pdflatex`) need to be made available in the system path 
+- For R make sure the following packages are installed:
+```
+install.packages("R.utils")
+install.packages("dplyr")
+install.packages("stringr")
+install.packages("reshape2")
+install.packages("ggplot2"
+install.packages("readr")
+install.packages("stargazer")
+```
+
+## 3.2 step by step
+1) clone project to local computer by opening the command line/ terminal and run:
+```
+git clone https://github.com/course-dprep/team-assignment-team-17.git
+```
+2) Move to directory where clone is located in the terminal
+3) Type `make` in the command line/terminal
+4) The project should run
 
 ## About 
 
