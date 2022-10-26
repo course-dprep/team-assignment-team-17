@@ -5,25 +5,25 @@ Welcome to the 'Canal parade vs Airbnb markter' repository! In this repository y
 
 ## Table of contents
 
-[1. Research](https://github.com/course-dprep/team-assignment-team-17#research)
+[1. Research](https://github.com/course-dprep/effect-of-canal-parade-on-prices#research)
 
-[1.1 Research question](https://github.com/course-dprep/team-assignment-team-17#research-question)
+[1.1 Research question](https://github.com/course-dprep/effect-of-canal-parade-on-prices#research-question)
 
-[1.2 Research motivation](https://github.com/course-dprep/team-assignment-team-17#research-motivation)
+[1.2 Research motivation](https://github.com/course-dprep/effect-of-canal-parade-on-prices#research-motivation)
 
-[1.3 Research method](https://github.com/course-dprep/team-assignment-team-17#research-method)
+[1.3 Research method](https://github.com/course-dprep/effect-of-canal-parade-on-prices#research-method)
 
-[1.4 Conceptual model](https://github.com/course-dprep/team-assignment-team-17#conceptual-model)
+[1.4 Conceptual model](https://github.com/course-dprep/effect-of-canal-parade-on-prices#conceptual-model)
 
-[1.5 conclusion](https://github.com/course-dprep/team-assignment-team-17#15-conclusion)
+[1.5 conclusion](https://github.com/course-dprep/effect-of-canal-parade-on-prices#15-conclusion)
 
-[2. Repository overview](https://github.com/course-dprep/team-assignment-team-17#repository-overview)
+[2. Repository overview](https://github.com/course-dprep/effect-of-canal-parade-on-prices#repository-overview)
 
-[3. Running the project](https://github.com/course-dprep/team-assignment-team-17#3-running-the-project)
+[3. Running the project](https://github.com/course-dprep/effect-of-canal-parade-on-prices#3-running-the-project)
 
-[3.1 Dependencies](https://github.com/course-dprep/team-assignment-team-17#31-dependencies)
+[3.1 Dependencies](https://github.com/course-dprep/effect-of-canal-parade-on-prices#31-dependencies)
 
-[3.2 Step by step](https://github.com/course-dprep/team-assignment-team-17#32-step-by-step)
+[3.2 Step by step](https://github.com/course-dprep/effect-of-canal-parade-on-prices#32-step-by-step)
 
 
 # 1. Research
@@ -36,14 +36,14 @@ The Canal Parade in Amsterdam is a parade of about 80 boats through the canals o
 Since the event is enormous in size, globally well-known and socially relevant we believe investigating the effect on prices and availability of Airbnb accommodations during this event is very interesting.
 
 ## 1.3 Research method
-The research method that is used in this project is a regression analysis. This method is used to examine the influence of the Canel Pride in Amsterdam on the price of the Airbnb listing in Amsterdam.  In the model, the moderator ‘location of the accommodation’ is analysed. According to this regression analysis, we can conclude if these variables have a significant effect on the Airbnb listing prices in Amsterdam. The research question can be answered by means of the output. See [here](https://github.com/course-dprep/team-assignment-team-17/blob/master/src/README.md) for the specific variables used.  
+The research method that is used in this project is a regression analysis. This method is used to examine the influence of the Canel Pride in Amsterdam on the price of the Airbnb listing in Amsterdam.  In the model, the moderator ‘location of the accommodation’ is analysed. According to this regression analysis, we can conclude if these variables have a significant effect on the Airbnb listing prices in Amsterdam. The research question can be answered by means of the output. See [the Rmarkdown file](https://github.com/course-dprep/effect-of-canal-parade-on-prices/tree/master/src/paper) for the specific variables used.  
 
 ## 1.4 Conceptual model
 
 ![conceptual model](https://user-images.githubusercontent.com/112410933/194032510-b492862b-b152-476d-a71b-7ef28c7c783e.jpg)
 
 ## 1.5 conclusion
-The complete analysis including statistical tests that were used and graphs that were made can be found in: [the paper folder](https://github.com/course-dprep/team-assignment-team-17/tree/master/src/paper)
+The complete analysis including statistical tests that were used and graphs that were made can be found in: [the paper folder](https://github.com/course-dprep/effect-of-canal-parade-on-prices/tree/master/src/paper)
 
 Based on the analysis done the following conclusions can be drawn for the hypothesis. There is no significant effect in the difference in price during the Canal parade and the weekends before and after the Canal Parade. 
 
@@ -84,7 +84,7 @@ install.packages("stargazer")
 ## 3.2 step by step
 1) clone project to local computer by opening the command line/ terminal and run:
 ```
-git clone https://github.com/course-dprep/team-assignment-team-17.git
+git clone https://github.com/course-dprep/effect-of-canal-parade-on-prices.git
 ```
 2) Move to directory where clone is located in the terminal
 3) Type `make` in the command line/terminal
