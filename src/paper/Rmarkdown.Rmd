@@ -39,7 +39,7 @@ http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-12-05/
 http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-12-05/data/calendar.csv.gz
 
 
-We cleaned and merged both of the files to make it usefull to answer the research question, and created the following dataset: airbnb with the following variables: 
+We cleaned and merged both of the files to make it usefull to answer the research question, and created the following dataset, airbnb with the following variables: 
 
 | **Variable name**                     | type  | **Variable explanation**              |
 | --------------------------------------|-------|---------------------------------------|
@@ -134,7 +134,7 @@ ggplot(temptrue, aes(x=date_cp, y=price_mean,fill=as.factor(neighbourhood_cleans
 
 # Conclusion
 
-So found is that there is no significant difference between the prices of airbnb's in Amsterdam during and not during the Canal parade. The different neighbourhoods also do not add to create a significant difference. The Canal parade takes place in the center of Amsterdam but this does not have a bigger effect on the prices in the center compaired to the other areas.  
+Found is that there is no significant difference between the prices of airbnb's in Amsterdam during the Canal parade and 'normal' weekends. The different neighbourhoods also do not add to create a significant difference. The Canal parade takes place in the center of Amsterdam but this does not have a bigger effect on the prices in the center compaired to the other areas.  
 
 
 # Implications
