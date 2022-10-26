@@ -43,7 +43,11 @@ The research method that is used in this project is a regression analysis. This 
 ![conceptual model](https://user-images.githubusercontent.com/112410933/194032510-b492862b-b152-476d-a71b-7ef28c7c783e.jpg)
 
 ## 1.5 conclusion
+The complete analysis including statistical tests that were used and graphs that were made can be found in: [the paper folder](https://github.com/course-dprep/team-assignment-team-17/tree/master/src/paper)
+
 Based on the analysis done the following conclusions can be drawn for the hypothesis. There is no significant effect in the difference in price during the Canal parade and the weekends before and after the Canal Parade. 
+
+Interaction effects where also used in the form of different neighbourhoods in Amsterdam, but these intercations do not show significant differences in price either. 
 __________________________________________________________________________________________
 # 2. Repository overview
 ```
