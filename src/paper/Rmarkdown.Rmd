@@ -36,12 +36,45 @@ Since the event is enormous in size, globally well-known and socially relevant w
 # Data cleaning
 
 To be able to conduct the research explained above, two datafiles needed to be merged and cleaned. These datafiles were conducted from insideairbnb.nl with the following URLs:
+
 http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-12-05/data/listings.csv.gz
+
 http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-12-05/data/calendar.csv.gz
 
-These files consisted the following data:
 
-We cleaned and merged both of the files to make it usefull to answer the research question, and created the following dataset: airbnb
+We cleaned and merged both of the files to make it usefull to answer the research question, and created the following dataset: airbnb with the following variables: 
+
+| **Variable name**                     | type  | **Variable explanation**              |
+| --------------------------------------|-------|---------------------------------------|
+| price_calender                        |  (Y)  | The price registered on a given date  |
+| price_listing                         |       | The price of the listing              |
+| date                                  | (X1)  | Neighbourhood in Amsterdam            |
+| Oostelijk Havengebied -Indische Buurt | (X2)  | Neighbourhood in Amsterdam            |
+| De Baarsjes - Oud-West                | (X3)  | Neighbourhood in Amsterdam            | 
+| Zuid                                  | (X4)  | Neighbourhood in Amsterdam            |
+| Noord-West                            | (X5)  | Neighbourhood in Amsterdam            |
+| De Aker - Nieuw Sloten                | (X6)  | Neighbourhood in Amsterdam            |
+| Westerpark                            | (X7)  | Neighbourhood in Amsterdam            |
+| Watergraafsmeer                       | (X8)  | Neighbourhood in Amsterdam            |
+| Oud-Noord                             | (X9)  | Neighbourhood in Amsterdam            |
+| Bijlmer-Centrum                       | (X10) | Neighbourhood in Amsterdam            |
+| Bos en Lommer                         | (X11) | Neighbourhood in Amsterdam            |
+| Gaasperdam - Driemond                 | (X12) | Neighbourhood in Amsterdam            |
+| Oostelijk Havengebied -Indische Buurt | (X13) | Neighbourhood in Amsterdam            |
+| De Baarsjes - Oud-West                | (X14) | Neighbourhood in Amsterdam            |
+| Zuid                                  | (X15) | Neighbourhood in Amsterdam            |
+| Noord-West                            | (X16) | Neighbourhood in Amsterdam            |
+| De Aker - Nieuw Sloten                | (X17) | Neighbourhood in Amsterdam            |
+| Westerpark                            | (X18) | Neighbourhood in Amsterdam            |
+| Watergraafsmeer                       | (X19) | Neighbourhood in Amsterdam            |
+| Oud-Noord                             | (X20) | Neighbourhood in Amsterdam            |
+| Bijlmer-Centrum                       | (X21) | Neighbourhood in Amsterdam            |
+| Bos en Lommer                         | (X22) | Neighbourhood in Amsterdam            |
+| Gaasperdam - Driemond                 | (X23) | Neighbourhood in Amsterdam            |
+| listing_id                            |       | The number related to the listing     |
+| id                                    |       | The number related to the listing     |
+| availability                          |       | The availability of the Airbnb        |
+
 
 
 # Statistical tests
@@ -49,8 +82,12 @@ We cleaned and merged both of the files to make it usefull to answer the researc
 For testing significance of this analysis two statistical tests were executed: ANOVA and a linear regression
 
 ## The ANOVA test:
+```{r opening the right file, echo=FALSE, eval=FALSE}
+airbnb <- read_csv("../../gen/temp/airbnb_merged.csv")
+```
 
-```{r ANOVA code, echo=FALSE, eval=FALSE}
+
+```{r ANOVA code, echo=FALSE, eval=TRUE}
 airbnb <- read_csv("../../gen/temp/airbnb_merged.csv")
 Canal_parade_aov <- lm(adjusted_price ~ `Centrum-Oost`*date_cp + `Zuid`*date_cp + `Oostelijk Havengebied - Indische Buurt`*date_cp+`Noord-West`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`Watergraafsmeer`*date_cp+`Oud-Noord`*date_cp+`Bijlmer-Centrum`+`Bos en Lommer`*date_cp+`Gaasperdam - Driemond`*date_cp+`De Pijp - Rivierenbuurt`*date_cp+`Centrum-West`*date_cp+`Oud-Oost`*date_cp+`Noord-Oost`*date_cp+`Buitenveldert - Zuidas`*date_cp+`IJburg - Zeeburgereiland`*date_cp+`Osdorp`*date_cp+`Slotervaart`*date_cp+`Geuzenveld - Slotermeer`*date_cp+`Bijlmer-Oost`*date_cp , airbnb)
 
@@ -61,7 +98,7 @@ anova(Canal_parade_aov)
 
 ## The linear regression:
 
-```{r linear regression code, echo=FALSE,eval=FALSE}
+```{r linear regression code, echo=FALSE,eval=TRUE}
 canal_parade_lm <- lm(price_calendar ~ `Centrum-Oost`*date_cp + `Zuid`*date_cp + `Oostelijk Havengebied - Indische Buurt`*date_cp+`Noord-West`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`Watergraafsmeer`*date_cp+`Oud-Noord`*date_cp+`Bijlmer-Centrum`+`Bos en Lommer`*date_cp+`Gaasperdam - Driemond`*date_cp+`De Pijp - Rivierenbuurt`*date_cp+`Centrum-West`*date_cp+`Oud-Oost`*date_cp+`Noord-Oost`*date_cp+`Buitenveldert - Zuidas`*date_cp+`IJburg - Zeeburgereiland`*date_cp+`Osdorp`*date_cp+`Slotervaart`*date_cp+`Geuzenveld - Slotermeer`*date_cp+`Bijlmer-Oost`*date_cp , airbnb)
 
 summary(canal_parade_lm)
