@@ -1,6 +1,5 @@
 ---
 title: "The effect of the canal parade on the Airbnb market in Amsterdam"
-author: "Nore Messing"
 date: "2022-10-25"
 output: pdf_document
 ---
@@ -25,7 +24,7 @@ library("stargazer")
 
 # The effect of the canal parade on the Airbnb market in Amsterdam
 
-Janne Donkers (....), Isa Nummerdor (....), Nore Messing (2085822)
+Janne Donkers (2009359), Isa Nummerdor (....), Nore Messing (2085822)
 
 # Introduction 
 
@@ -35,7 +34,7 @@ Since the event is enormous in size, globally well-known and socially relevant w
 
 # Data cleaning
 
-To be able to conduct the research explained above, two datafiles needed to be merged and cleaned. These datafiles were conducted from insideairbnb.nl with the following URLs:
+To be able to conduct the research explained above, two datafiles needed to be merged and cleaned. These datafiles were conducted from insideairbnb.nl from the following URLs:
 
 http://data.insideairbnb.com/the-netherlands/north-holland/amsterdam/2021-12-05/data/listings.csv.gz
 
@@ -46,8 +45,12 @@ We cleaned and merged both of the files to make it usefull to answer the researc
 
 | **Variable name**                     | type  | **Variable explanation**              |
 | --------------------------------------|-------|---------------------------------------|
-| price_calender                        |  (Y)  | The price registered on a given date  |
-| price_listing                         |       | The price of the listing              |
+| listing_id                            |  (Y)  | The number related to the listing     |
+| available                             |  (Y)  | The availability of the Airbnb        |
+| price_calendar                        |  (Y)  | The price registered on a given date  |
+| date                                  |  (Y)  | The date                              |
+| neighbourhood_cleansed                |  (Y)  | The price registered on a given date  |
+| price_listing                         |  (Y)  | The price of the listing              |
 | date                                  | (X1)  | Neighbourhood in Amsterdam            |
 | Oostelijk Havengebied -Indische Buurt | (X2)  | Neighbourhood in Amsterdam            |
 | De Baarsjes - Oud-West                | (X3)  | Neighbourhood in Amsterdam            | 
@@ -71,9 +74,8 @@ We cleaned and merged both of the files to make it usefull to answer the researc
 | Bijlmer-Centrum                       | (X21) | Neighbourhood in Amsterdam            |
 | Bos en Lommer                         | (X22) | Neighbourhood in Amsterdam            |
 | Gaasperdam - Driemond                 | (X23) | Neighbourhood in Amsterdam            |
-| listing_id                            |       | The number related to the listing     |
-| id                                    |       | The number related to the listing     |
-| availability                          |       | The availability of the Airbnb        |
+| date                                  |  (Y)  | Date canal parade = TRUE              |
+
 
 
 
@@ -87,7 +89,7 @@ airbnb <- read_csv("../../gen/temp/airbnb_merged.csv")
 ```
 
 
-```{r ANOVA code, echo=FALSE, eval=TRUE}
+```{r ANOVA code, echo=FALSE, eval=TRUE, show_col_types = FALSE}
 airbnb <- read_csv("../../gen/temp/airbnb_merged.csv")
 Canal_parade_aov <- lm(adjusted_price ~ `Centrum-Oost`*date_cp + `Zuid`*date_cp + `Oostelijk Havengebied - Indische Buurt`*date_cp+`Noord-West`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`Watergraafsmeer`*date_cp+`Oud-Noord`*date_cp+`Bijlmer-Centrum`+`Bos en Lommer`*date_cp+`Gaasperdam - Driemond`*date_cp+`De Pijp - Rivierenbuurt`*date_cp+`Centrum-West`*date_cp+`Oud-Oost`*date_cp+`Noord-Oost`*date_cp+`Buitenveldert - Zuidas`*date_cp+`IJburg - Zeeburgereiland`*date_cp+`Osdorp`*date_cp+`Slotervaart`*date_cp+`Geuzenveld - Slotermeer`*date_cp+`Bijlmer-Oost`*date_cp , airbnb)
 
@@ -98,7 +100,7 @@ anova(Canal_parade_aov)
 
 ## The linear regression:
 
-```{r linear regression code, echo=FALSE,eval=TRUE}
+```{r linear regression code, echo=FALSE,eval=TRUE, show_col_types= FALSE}
 canal_parade_lm <- lm(price_calendar ~ `Centrum-Oost`*date_cp + `Zuid`*date_cp + `Oostelijk Havengebied - Indische Buurt`*date_cp+`Noord-West`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`De Aker - Nieuw Sloten`*date_cp+`Westerpark`*date_cp+`Watergraafsmeer`*date_cp+`Oud-Noord`*date_cp+`Bijlmer-Centrum`+`Bos en Lommer`*date_cp+`Gaasperdam - Driemond`*date_cp+`De Pijp - Rivierenbuurt`*date_cp+`Centrum-West`*date_cp+`Oud-Oost`*date_cp+`Noord-Oost`*date_cp+`Buitenveldert - Zuidas`*date_cp+`IJburg - Zeeburgereiland`*date_cp+`Osdorp`*date_cp+`Slotervaart`*date_cp+`Geuzenveld - Slotermeer`*date_cp+`Bijlmer-Oost`*date_cp , airbnb)
 
 summary(canal_parade_lm)
@@ -107,9 +109,11 @@ summary(canal_parade_lm)
 
 # Graph representation
 
-From these tests can be seen that there are no significant differences in the prices during 'normal' weekends and the weekends of the canal parade, and that this also does not differ in the different neighbourhoods. This can also be seen in the graphs below:
+From these tests can be seen that there are no significant differences in the prices during 'normal' weekends and the weekends of the canal parade, and that this also does not differ in the different neighbourhoods. That there is no difference can also be seen in the graphs below, since they are the same:
 
-```{r graph false, eval=TRUE, echo=FALSE, warning=FALSE}
+## The graph for weekends where there was no canal parade
+
+```{r graph false, eval=TRUE, echo=FALSE, warning=FALSE, show_col_types= FALSE}
 airbnb <- read_csv("../../gen/temp/airbnb_merged.csv")
 tempfalse <- airbnb %>% group_by(neighbourhood_cleansed, date_cp = FALSE) %>% summarise(price_mean = mean(price_calendar))
 ggplot(tempfalse, aes(x=date_cp, y=price_mean,fill=as.factor(neighbourhood_cleansed)))+ 
@@ -120,7 +124,9 @@ ggplot(tempfalse, aes(x=date_cp, y=price_mean,fill=as.factor(neighbourhood_clean
 
 ```
 
-```{r graph true, eval=TRUE, echo=FALSE, warning=FALSE}
+## the graph for weekend where ther was a canal parade
+
+```{r graph true, eval=TRUE, echo=FALSE, warning=FALSE, show_col_types= FALSE}
 temptrue <- airbnb %>% group_by(neighbourhood_cleansed, date_cp = TRUE) %>% summarise(price_mean = mean(price_calendar))
 ggplot(temptrue, aes(x=date_cp, y=price_mean,fill=as.factor(neighbourhood_cleansed)))+ 
   geom_col(position="dodge") +
@@ -132,7 +138,8 @@ ggplot(temptrue, aes(x=date_cp, y=price_mean,fill=as.factor(neighbourhood_cleans
 
 # Conclusion
 
-So found is that there is no significant difference between the prices of airbnb's in Amsterdam during and not during the Canal parade. 
+So found is that there is no significant difference between the prices of airbnb's in Amsterdam during and not during the Canal parade. The different neighbourhoods also do not add to create a significant difference. The Canal parade takes place in the center of Amsterdam but this does not have a bigger effect on the prices in the center compaired to the other areas.  
 
 
 # Implications
+This can mean for consumers that they don't have to worry about booking early or paying crazy prices for a stay in Amsterdam during the canal parade. And for the Airbnb owners to not drive up their price of their bookings during the canal parade since competitors are not doing this either. 
