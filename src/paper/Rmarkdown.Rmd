@@ -22,9 +22,7 @@ library("readr")
 library("stargazer")
 ```
 
-# The effect of the canal parade on the Airbnb market in Amsterdam
-
-Janne Donkers (2009359), Isa Nummerdor (....), Nore Messing (2085822)
+Janne Donkers (2009359), Isa Nummerdor (155177), Nore Messing (2085822)
 
 # Introduction 
 
@@ -84,7 +82,7 @@ We cleaned and merged both of the files to make it usefull to answer the researc
 For testing significance of this analysis two statistical tests were executed: ANOVA and a linear regression
 
 ## The ANOVA test:
-```{r opening the right file, echo=FALSE, eval=FALSE}
+```{r opening the right file, echo=FALSE, eval=FALSE, show_col_types = FALSE}
 airbnb <- read_csv("../../gen/temp/airbnb_merged.csv")
 ```
 
@@ -114,7 +112,6 @@ From these tests can be seen that there are no significant differences in the pr
 ## The graph for weekends where there was no canal parade
 
 ```{r graph false, eval=TRUE, echo=FALSE, warning=FALSE, show_col_types= FALSE}
-airbnb <- read_csv("../../gen/temp/airbnb_merged.csv")
 tempfalse <- airbnb %>% group_by(neighbourhood_cleansed, date_cp = FALSE) %>% summarise(price_mean = mean(price_calendar))
 ggplot(tempfalse, aes(x=date_cp, y=price_mean,fill=as.factor(neighbourhood_cleansed)))+ 
   geom_col(position="dodge") +
@@ -123,8 +120,7 @@ ggplot(tempfalse, aes(x=date_cp, y=price_mean,fill=as.factor(neighbourhood_clean
   theme(legend.title = element_text(size=10))
 
 ```
-
-## the graph for weekend where ther was a canal parade
+## the graph for weekend where there was a canal parade
 
 ```{r graph true, eval=TRUE, echo=FALSE, warning=FALSE, show_col_types= FALSE}
 temptrue <- airbnb %>% group_by(neighbourhood_cleansed, date_cp = TRUE) %>% summarise(price_mean = mean(price_calendar))
