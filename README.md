@@ -1,23 +1,96 @@
-# Example of reproducible research workflow 
+# The effect of the canal parade on the Airbnb market in Amsterdam
 
-This is a basic example repository using Gnu make for a reproducible research workflow, as described in detail here: [tilburgsciencehub.com](http://tilburgsciencehub.com/). 
+# Introduction
+Welcome to the 'Canal parade vs Airbnb market repository! In this repository you can read about our research regarding the effect of the canal parade on the Airbnb market, which includes prices and availability. 
 
-The main aim of this to have a basic structure, which can be easily adjusted to use in an actual project.  In this example project, the following is done: 
-1. Download and prepare data
-2. Run some analysis
-3. Present results in a final pdf generated using LaTeX
+## Table of contents
 
-## Dependencies
-- R 
-- R packages: `install.packages("stargazer")`
-- [Gnu Make](https://tilburgsciencehub.com/get/make) 
-- [TeX distribution](https://tilburgsciencehub.com/get/latex/?utm_campaign=referral-short)
+[1. Research](https://github.com/course-dprep/effect-of-canal-parade-on-prices#research)
+
+[1.1 Research question](https://github.com/course-dprep/effect-of-canal-parade-on-prices#research-question)
+
+[1.2 Research motivation](https://github.com/course-dprep/effect-of-canal-parade-on-prices#research-motivation)
+
+[1.3 Research method](https://github.com/course-dprep/effect-of-canal-parade-on-prices#research-method)
+
+[1.4 Conceptual model](https://github.com/course-dprep/effect-of-canal-parade-on-prices#conceptual-model)
+
+[1.5 conclusion](https://github.com/course-dprep/effect-of-canal-parade-on-prices#15-conclusion)
+
+[2. Repository overview](https://github.com/course-dprep/effect-of-canal-parade-on-prices#repository-overview)
+
+[3. Running the project](https://github.com/course-dprep/effect-of-canal-parade-on-prices#3-running-the-project)
+
+[3.1 Dependencies](https://github.com/course-dprep/effect-of-canal-parade-on-prices#31-dependencies)
+
+[3.2 Step by step](https://github.com/course-dprep/effect-of-canal-parade-on-prices#32-step-by-step)
+
+
+# 1. Research
+## 1.1 Research question
+To what extent has the Canal Pride in the Netherlands changed the price per night of the Airbnb accomodations in Amsterdam, and to what extent does the location of the accomodation influence this effect?
+
+## 1.2 Research motivation
+The Canal Parade in Amsterdam is a parade of about 80 boats through the canals of Amsterdam, representing a variety of representatives and organizations related to the LGBTQI+ society. The Canal Parade is the highlight of the yearly Pride Week and attracts many spectators. The parade is followed by various parties in the city center of Amsterdam. Several hundred thousand visitors attend the events which makes the Canal Parade one of the biggest publicly open events in the Netherlands. The parade is also well known outside of the Netherlands. 
+
+Since the event is enormous in size, globally well-known and socially relevant we believe investigating the effect on prices and availability of Airbnb accommodations during this event is very interesting.
+
+## 1.3 Research method
+The research method that is used in this project is a regression analysis. This method is used to examine the influence of the Canel Pride in Amsterdam on the price of the Airbnb listing in Amsterdam.  In the model, the moderator ‘location of the accommodation’ is analysed. According to this regression analysis, we can conclude if these variables have a significant effect on the Airbnb listing prices in Amsterdam. The research question can be answered by means of the output. See [the Rmarkdown file](https://github.com/course-dprep/effect-of-canal-parade-on-prices/tree/master/src/paper) for the specific variables used.  
+
+## 1.4 Conceptual model
+
+![conceptual model](https://user-images.githubusercontent.com/112410933/194032510-b492862b-b152-476d-a71b-7ef28c7c783e.jpg)
+
+## 1.5 conclusion
+The complete analysis including statistical tests that were used and graphs that were made can be found in: [the paper folder](https://github.com/course-dprep/effect-of-canal-parade-on-prices/tree/master/src/paper)
+
+Based on the analysis done the following conclusions can be drawn for the hypothesis. There is no significant effect in the difference in price during the Canal parade and the weekends before and after the Canal Parade. 
+
+Interaction effects where also used in the form of different neighbourhoods in Amsterdam, but these intercations do not show significant differences in price either. 
+__________________________________________________________________________________________
+# 2. Repository overview
+```
+- data
+- gen
+  - input
+  - output
+  - temp
+- src
+  - analysis
+  - data-preparation
+  - paper
+- .gitignore
+- README.md
+- Makefile
+```
+
+# 3. Running the project
+## 3.1 dependencies
+- R. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/statistics-and-computation/r/).
+- Make. [Installation guide](https://tilburgsciencehub.com/building-blocks/configure-your-computer/automation-and-workflows/make/).
 - For the `makefile` to work, R, Gnu make and the TeX distribution (specifically `pdflatex`) need to be made available in the system path 
-- Detailed installation instructions can be found here: [tilburgsciencehub.com](http://tilburgsciencehub.com/)
+- For R make sure the following packages are installed:
+```
+install.packages("R.utils")
+install.packages("dplyr")
+install.packages("stringr")
+install.packages("reshape2")
+install.packages("ggplot2"
+install.packages("readr")
+install.packages("stargazer")
+```
 
+## 3.2 step by step
+1) clone project to local computer by opening the command line/ terminal and run:
+```
+git clone https://github.com/course-dprep/effect-of-canal-parade-on-prices.git
+```
+2) Move to directory where clone is located in the terminal
+3) Type `make` in the command line/terminal
+4) The project should run
 
-## Notes
-- `make clean` removes all unncessary temporary files. 
-- Tested under Linux Mint (should work in any linux distro, as well as on Windows and Mac) 
-- IMPORTANT: In `makefile`, when using `\` to split code into multiple lines, no space should follow `\`. Otherwise Gnu make aborts with error 193. 
-- Many possible improvements remain. Comments and contributions are welcome!
+## About 
+
+This research project is part of the [Data Preparation and Workflow Management (dPrep)](https://dprep.hannesdatta.com/) course at Tilburg University. The project is conducted by Team 17: [Isa Nummerdor](https://github.com/isanummerdor), [Janne Donkers](https://github.com/JanneDonkers) and [Nore Messing](https://github.com/Noremessing).
+

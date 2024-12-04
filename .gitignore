@@ -2,6 +2,8 @@
 *.aux
 *.Rhistory
 .RData
-**gen/
 **.Rout
 *.csv
+*.csv.gz
+Rplots.pdf
+*.pdf
